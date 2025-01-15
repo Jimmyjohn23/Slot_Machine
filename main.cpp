@@ -72,8 +72,13 @@ int main() {
 
     } while (playMoney > 0 && playAgain == 1);
 
-    // Display goodbye message if user is out of moneyS
-    std::cout << "You're out of money. Goodbye!" << std::endl;
+    // Display goodbye message 
+    if (playMoney == 0){
+        std::cout << "You have no money left. Goodbye!" << std::endl;
+    } else {
+        std::cout << "You have won: $" << playMoney << std::endl;
+        std::cout << "Goodbye!" << std::endl;
+    }
 
     return 0;
 }
